@@ -308,10 +308,10 @@ function Reset() {
 
 function playSound(sound,loop) {
 	if (loop) {
-		play(soundsIDs[sound],0,false,0,0)
+		play(soundsIDs[sound],0,true,0,0)
 	}
 	else {
-		play(soundsIDs[sound],0,true,0,0)
+		play(soundsIDs[sound],0,false,0,0)
 	}
 }
 
