@@ -1,0 +1,15 @@
+<svg version="1.1" width="55" height="72" viewBox="-1 -1 55 72" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="grad_1" cx="0.5188" cy="0.9537" r="1.2398099999999999">
+      <stop offset="0" stop-color="#E5E5E5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="grad_2" cx="0.5605" cy="0.8789" r="1.14257">
+      <stop offset="0" stop-color="#E5E5E5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <!-- Exported by Scratch - http://scratch.mit.edu/ -->
+  <path id="ID0.37115472462028265" fill="url(#grad_1)" stroke="none" d="M 209.750 147.750 L 262.750 147.750 L 262.750 218 L 209.750 218 L 209.750 147.750 Z " transform="matrix(1, 0, 0, 1, -209.5, -147.75)"/>
+  <path id="ID0.9341127006337047" fill="url(#grad_2)" stroke="#000000" stroke-width="2" d="M 236.625 152.500 C 241.763 152.500 246.420 154.587 249.791 157.959 C 253.163 161.330 255.250 165.987 255.250 171.125 C 255.250 176.263 253.163 180.920 249.791 184.291 C 246.420 187.663 241.763 189.750 236.625 189.750 C 231.487 189.750 226.830 187.663 223.459 184.291 C 220.087 180.920 218 176.263 218 171.125 C 218 165.987 220.087 161.330 223.459 157.959 C 226.830 154.587 231.487 152.500 236.625 152.500 Z " transform="matrix(1, 0, 0, 1, -209.5, -148.25)"/>
+</svg>

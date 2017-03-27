@@ -1,0 +1,34 @@
+<head>
+<title>4: Setting the costume
+</title>
+</head>
+
+<p style="text-align: center;"><font size="10">GameLib<br></font>
+<font size="5">Documentation<br>
+<font size="2">Getting started<br></font>
+<font size="2">4: Setting the costume<br></font>
+<a href="../../Help.html">Home</a><br>
+<a href="index.html">Back</a><br><br>
+</font>
+So far we've made a canvas and a sprite, but we can't see anything! <br>
+So why? <br>
+GameLib currently doesn't have a defalt costume so you must set one. <br><br>
+Simply add: <br>
+<textarea rows="4" cols="50">
+newResetScript("Sprite1",'setCos("IMG.jpg")')
+</textarea><br>
+Change "Sprite1" to the name of your sprite. <br>
+Change "IMG.jpg" to the path to the image file you want to use. <br>
+Tada! <br>
+</p>
+<script src="../../GameLib.js"></script>
+<script type="text/javascript"> //Import the lib.
+makeCanvas(100,100)
+newSprite("Sprite1")
+newResetScript("Sprite1",'setCos("../../IMG.jpg")')
+</script><br>
+<p style="text-align: center;">
+Click the flag to run a project. <br>
+You now have a visable sprite. :D <br><br>
+<a href="3.html">Previous</a><br>
+<a href="5.html">Next</a><br>

@@ -1,0 +1,41 @@
+<head>
+<title>8: Sounds
+</title>
+</head>
+
+<p style="text-align: center;"><font size="10">GameLib<br></font>
+<font size="5">Documentation<br>
+<font size="2">Getting started<br></font>
+<font size="2">8: Sounds<br></font>
+<a href="../../Help.html">Home</a><br>
+<a href="index.html">Back</a><br><br>
+</font>
+Sounds really make games come alive. <br>
+GameLib makes it easy to add sounds to your game. <br>
+Here are the sound commands: <br>
+<textarea rows="4" cols="100">
+play(Path to audio file, Starting pos (secs), Loop (true/false), Restart delay (secs), Restart pos (secs)) // Play a file.
+stop(ID) // Stop a file.
+pause(ID) // Pause a file.
+resume(ID) // Resume a file.
+</textarea><br>
+All of them except the first one need an id which is the amount of sounds playing when it was added. <br>
+Note: if a sound finishes and there is still another file playing the id will not go down. <br>
+e.g:
+Background music is playing. It's ID: 0 <br>
+A sound effect plays. It's ID: 1 <br>
+Another sound effect plays. It's ID: 2 <br>
+<br>
+Ids will only go back down if there are no active sounds, or if they are the most recent sound started. (Paused sounds will also count.) <br>
+The first command might seem complicated, so here's a simple one: <br>
+<textarea rows="1" cols="50">
+play(Path to audio file,0,false,0,0) // Play a file.
+</textarea><br><br>
+That's a non loop one. <br>
+Here's a loop one: <br>
+<textarea rows="1" cols="50">
+play(Path to audio file,0,true,10,0) // Play a file.
+</textarea><br><br>
+Now you can control have sound! :D <br> 
+<br>
+<a href="7.html">Previous</a><br>

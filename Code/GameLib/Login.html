@@ -1,0 +1,84 @@
+<p style="text-align: center;" id="Pressed"></p><br>
+<script src="CookieLib.js"></script>
+<script type="text/javascript"> //Import the cookie library.
+var users = {"Hedgehog125":"SlNpc2Nvb2w="}
+var mainMenu = `<br> Cookie Storage: <br><br> Name: <input type="string" id="SaveName" value=""> <br> 
+Value: <textarea rows="1" cols="50" id="Save"></textarea><br><button type="button" onclick="save()">Save</button><br><button type="button" onclick="load()">Load</button><br>`
+
+function openlogin() {
+	setCookie("Login","Anonymous")
+	showLogin()
+}
+
+if (getCookie("Login") === "Anonymous") {
+	openlogin()
+}
+else {
+	if (! cookieExists("Login")) {
+		openlogin()
+	}
+	else {
+		var user = getCookie("Login")
+		loggedin()
+	}
+}
+
+var user = getCookie("Login")
+
+function showLogin() {
+	document.getElementById("Pressed").innerHTML = `Please login below... <br> Username: <input type="string" id="User" value=""> <br>
+	Password: <input type="password" id="Code" value=""> <br>
+	<input onclick="login()" type="button" value="Login" id="Login"/> <br>`
+}
+
+function setDisplay(dis) {
+	document.getElementById("Pressed").innerHTML = dis
+}
+
+function login() {
+	if (document.getElementById("User").value in users) {
+		var pass = document.getElementById("Code").value
+		if (pass === atob(users[document.getElementById("User").value])) {
+			user = document.getElementById("User").value
+			loggedin()
+		}
+		else {
+			showLogin()
+			setDisplay(document.getElementById("Pressed").innerHTML + "Your password is incorrect.")
+		}
+	}
+	else {
+		showLogin()
+		setDisplay(document.getElementById("Pressed").innerHTML + "Your username is incorrect.")
+	}
+}
+
+function logout() {
+	setCookie("Login","Anonymous")
+	showLogin()
+}
+
+function loggedin() {
+	setDisplay("Welcome " + user + '! <br> <button type="button" onclick="logout()">Logout</button><br>' + mainMenu)
+	setCookie("Login",user)
+}
+
+function save() {
+	if (! cookieExists("Text")) {
+		setCookie("Text",{})
+	}
+	var list = getCookie("Text")
+	list[document.getElementById("SaveName").value] = document.getElementById("Save").value
+	setCookie("Text",list)
+}
+
+function load() {
+	if (document.getElementById("SaveName").value in getCookie("Text")) {
+		document.getElementById("Save").value = getCookie("Text")[document.getElementById("SaveName").value]
+	}
+	else {
+		document.getElementById("Save").value = "Error: Cookie doesn't exist."
+	}
+}
+
+</script>
