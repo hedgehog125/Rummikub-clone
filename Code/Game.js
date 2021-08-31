@@ -21,7 +21,7 @@ canvasVar.imageSmoothingQuality = "high"
 document.bgColor = "#cc0000"
 path = "Code/GameLib/" + path
 ScrollLib.newText("Banner")
-var banners = ["It's a game!","Banner","Rummikub","It's Dutch!","Enjoy!"]
+var banners = ["It's a game!","Banner","Rummikub","It's Romanian!","Enjoy!"]
 
 
 var imgs = {}
